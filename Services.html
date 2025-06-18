@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="415 Laboratory Services" />
+        <meta name="author" content="Your Name" />
+        <title>415 Laboratory</title>
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="images/游仆虫_1.png" />
+        <!-- Core theme CSS (includes Bootstrap) -->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/services.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- Responsive navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="https://www.sxu.edu.cn/" target="_blank">Shanxi University</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.hmtl">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="Services.html">Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="form-container">
+                <div class="form-panel">
+                    <div class="login-form">
+                        <h1>欢迎回来</h1>
+                        <form action="./php/login.php" method="post" onsubmit="return validateLoginForm()">
+                            <section class="form-section" style="display: flex; align-items: center;">
+                                <label for="login-email" style="margin-right: 10px;">邮箱</label>
+                                <input type="email" id="login-email" name="login-email" required style="flex: 1; max-width: 400px;"/>
+                            </section>
+                            <section class="form-section" style="display: flex; align-items: center;">
+                                <label for="login-password" style="margin-right: 10px;">密码</label>
+                                <input type="password" id="login-password" name="login-password" required style="flex: 1; max-width: 400px;"/>
+                            </section>
+                            <span style="margin-bottom: 8px; display: block; text-align: center;">忘记密码?</span>
+                            <!-- 添加一个新的 div 来居中按钮 -->
+                            <div style="text-align: center;">
+                                <button type="submit">登录</button>
+                                <button type="button" class="alternative-login">使用<span style="font-weight: 900; color: #455a81">二维码</span>登录</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="registration-form" style="display: none;">
+                        <h1>立即注册</h1>
+                        <form action="./php/register.php" method="post" onsubmit="return validateRegistrationForm()">
+                            <section class="form-section" style="display: flex; align-items: center;">
+                                <label for="reg-username" style="margin-right: 10px;">用户名</label>
+                                <input type="text" id="reg-username" name="reg-username" required style="flex: 1; max-width: 400px;"/>
+                            </section>
+                            <section class="form-section" style="display: flex; align-items: center;">
+                                <label for="reg-email" style="margin-right: 10px;">邮箱</label>
+                                <input type="email" id="reg-email" name="reg-email" required style="flex: 1; max-width: 400px;"/>
+                            </section>
+                            <section class="form-section" style="display: flex; align-items: center;">
+                                <label for="reg-phone" style="margin-right: 10px;">手机号</label> <!-- 新增手机号输入框 -->
+                                <input type="text" id="reg-phone" name="reg-phone" required style="flex: 1; max-width: 400px;"/>
+                            </section>
+                            <section class="form-section" style="display: flex; align-items: center;">
+                                <label for="reg-password" style="margin-right: 10px;">密码</label>
+                                <input type="password" id="reg-password" name="reg-password" required style="flex: 1; max-width: 400px;"/>
+                                <small style="color: red;" id="password-error" hidden>密码至少8个字符，包含字母和数字。</small>
+                            </section>
+                            <!-- 添加一个新的 div 来居中按钮 -->
+                            <div style="text-align: center;">
+                                <button type="submit">注册</button>
+                                <button type="button" class="alternative-login">使用<span style="font-weight: 900; color: #455a81">二维码</span>扫码注册</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="registration-panel">
+                    <h1 class="panel-title">还未注册？</h1>
+                    <span class="subTitle">立即注册，发现大量机会！</span>
+                    <button type="button" id="toggleForm">注册</button>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="js/services.js"></script>
+
+    </body>
+</html>
